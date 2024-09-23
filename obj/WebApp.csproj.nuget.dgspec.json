@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Connor\\Mess\\WebApp\\WebApp\\WebApp.csproj": {}
+    "C:\\Users\\Connor\\Mess\\ASP.NET-site\\WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Connor\\Mess\\WebApp\\WebApp\\WebApp.csproj": {
+    "C:\\Users\\Connor\\Mess\\ASP.NET-site\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Connor\\Mess\\WebApp\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\Connor\\Mess\\ASP.NET-site\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "C:\\Users\\Connor\\Mess\\WebApp\\WebApp\\WebApp.csproj",
+        "projectPath": "C:\\Users\\Connor\\Mess\\ASP.NET-site\\WebApp.csproj",
         "packagesPath": "C:\\Users\\Connor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Connor\\Mess\\WebApp\\WebApp\\obj\\",
+        "outputPath": "C:\\Users\\Connor\\Mess\\ASP.NET-site\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Connor\\AppData\\Roaming\\NuGet\\NuGet.Config",
