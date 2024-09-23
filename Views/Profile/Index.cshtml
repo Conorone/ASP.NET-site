@@ -1,0 +1,41 @@
+@model WebApp.Models.UserModel
+
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<div class="user-profile">
+    <h2>User Profile</h2>
+
+    <!-- Display Profile Picture -->
+    <div class="profile-picture">
+        @* <img src="@Model.ProfilePictureURL" alt="Profile Picture" style="width:150px;height:150px;border-radius:50%;" /> *@
+    </div>
+
+    <!-- Display Full Name -->
+    <div class="user-info">
+        <h3>@Model.FirstName @Model.Surname</h3>
+        <p><strong>Username:</strong> @Model.Username</p>
+    </div>
+
+    <!-- Edit Buttons -->
+    <div class="edit-buttons">
+        <button onclick="window.location.href='@Url.Action("Edit", "Profile")'" class="btn btn-primary">Edit Profile</button>
+    </div>
+</div>
+
+<!-- Add some simple styling for layout purposes -->
+<style>
+    .user-profile {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .edit-buttons {
+        margin-top: 20px;
+    }
+
+    .btn {
+        margin: 5px;
+    }
+</style>

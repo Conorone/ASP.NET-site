@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Set Stock";
+}
+
+<h2>Set Product Stock</h2>
+
+<form asp-action="SetStock" method="post">
+    <div>
+        <label for="productID">Enter Product ID:</label>
+        <input type="number" id="productID" name="productID" required />
+    </div>
+    <div>
+        <label for="stockInput">Enter Stock Amount:</label>
+        <input type="number" id="stockInput" name="stock" required />
+    </div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+</form>

@@ -1,0 +1,40 @@
+/* styles.css */
+
+body {
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* Light text color */
+}
+
+h1 {
+    color: #f8f9fa; /* Light color for the heading */
+    font-size: 3rem; /* Larger font size */
+    margin-bottom: 2rem; /* Space below the title */
+}
+
+.card {
+    background-color: #1d1d1d; /* Dark card background */
+    color: #ffffff; /* White text color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow */
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card-text {
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background-color: #979797;
+    border: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.container {
+    padding-top: 2rem; /* Add space at the top of the container */
+}
