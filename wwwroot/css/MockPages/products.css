@@ -1,20 +1,19 @@
 /* styles.css */
 
-body {
-    background-color: #121212; /* Dark background color */
-    color: #ffffff; /* Light text color */
-}
-
 h1 {
     color: #f8f9fa; /* Light color for the heading */
-    font-size: 3rem; /* Larger font size */
-    margin-bottom: 2rem; /* Space below the title */
+    font-size: 2rem; /* Larger font size */
+    margin-bottom: 3rem; /* Space below the title */
 }
 
 .card {
-    background-color: #1d1d1d; /* Dark card background */
+    background-color: #212529; /* Dark card background */
+    border-color: #212529;
     color: #ffffff; /* White text color */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow */
+    width: 18rem; /* Consistent card width */
+    height: 27rem; /* Consistent card height */
+    display: flex;
+    flex-direction: column; /* Ensure vertical alignment in the card */
 }
 
 .card-title {
@@ -37,4 +36,64 @@ a:hover {
 
 .container {
     padding-top: 2rem; /* Add space at the top of the container */
+}
+
+/* Ensuring uniform image sizes within cards */
+.fixed-image-size {
+    width: 100%; /* Full width of the card */
+    height: 300px; /* Fixed height */
+    object-fit: cover; /* Maintains aspect ratio and fills the image space */
+}
+
+/* Align card body content at the bottom */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ensure content is at the bottom */
+    flex-grow: 1;
+}
+
+/* Styling the horizontal line between rows */
+.card-row-divider {
+    border: 0;
+    border-top: 1px solid #ffffff33; /* Thin white line with opacity */
+    margin: 2rem 0; /* Spacing between rows */
+}
+
+.search {
+    position: relative;
+    display: flex;
+  }
+  
+.searchTerm {
+    width: 20rem;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus{
+    color: #00B4CC;
+}
+
+.searchButton {
+    width: 70px;
+    height: 40px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+    display: flex;
+    justify-content:right;
 }

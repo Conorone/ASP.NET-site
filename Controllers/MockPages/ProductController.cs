@@ -17,7 +17,7 @@ public class ProductController : Controller {
 
     public IActionResult SearchResults(string searchTerm) {
         ProductsDAO productsDAO = new ProductsDAO();
-
+        Console.WriteLine(searchTerm);
         List<ProductModel> productsList = productsDAO.SearchProducts(searchTerm);
         return View("~/Views/MockPages/Products/Index.cshtml", productsList);
     }

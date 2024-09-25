@@ -1,0 +1,1 @@
+SELECT * FROM Test.dbo.Products WHERE Name LIKE '%a%'

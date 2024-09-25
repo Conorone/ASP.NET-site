@@ -27,6 +27,17 @@ public class ProductsDAO : IProductDataService
             SqlCommand command = new SqlCommand(sqlStatement, connection);
             command.Parameters.AddWithValue("@value", value);
 
+            Console.WriteLine("Statement: " );
+
+            string finalSql = command.CommandText;
+            foreach (SqlParameter param in command.Parameters)
+            {
+                finalSql = finalSql.Replace(param.ParameterName, param.Value.ToString());
+            }
+
+            // Write the completed command statement to the console
+            Console.WriteLine("Statement: " + finalSql);
+
             try {
                 connection.Open();
 
@@ -54,7 +65,40 @@ public class ProductsDAO : IProductDataService
     }
 
     public List<ProductModel> SearchProducts(string searchTerm) {
-        return GetProducts("Name", '%' + searchTerm + '%');
+        List<ProductModel> foundProducts = new List<ProductModel>();
+
+        string sqlStatement = $"SELECT * FROM {table} WHERE Name LIKE @value";
+
+        using (SqlConnection connection = new SqlConnection(connectionString)) {
+            SqlCommand command = new SqlCommand(sqlStatement, connection);
+            command.Parameters.AddWithValue("@value", '%' + searchTerm + '%');
+
+            Console.WriteLine("Statement: " );
+
+            string finalSql = command.CommandText;
+            foreach (SqlParameter param in command.Parameters)
+            {
+                finalSql = finalSql.Replace(param.ParameterName, param.Value.ToString());
+            }
+
+            // Write the completed command statement to the console
+            Console.WriteLine("Statement: " + finalSql);
+
+            try {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+                while(reader.Read()) {
+                    ProductModel product = new ProductModel { ID = (int)reader[0], Name = (string)reader[1], Price = (decimal)reader[2], Description = (string)reader[3], Stock = (int)reader[4] };
+                    product.Image = reader[5] == DBNull.Value ? null : (byte[])reader[5];
+                    foundProducts.Add(product);
+                }
+
+            } catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        return foundProducts;
     }
 
     public bool Insert(ProductModel product)
@@ -178,10 +222,13 @@ public class ProductsDAO : IProductDataService
             columnsToUpdate.Add("Stock");
             values.Add(updatedProduct.Stock);
         }
-        if(existingProduct.Image != updatedProduct.Image) {
-            columnsToUpdate.Add("Image");
-            values.Add(updatedProduct.Image);
+        if(updatedProduct.Image != null) {
+            if(existingProduct.Image != updatedProduct.Image) {
+                columnsToUpdate.Add("Image");
+                values.Add(updatedProduct.Image);
+            }
         }
+
 
         
         if(columnsToUpdate.Count == 0) return true;
@@ -205,16 +252,16 @@ public class ProductsDAO : IProductDataService
                 command.Parameters.AddWithValue("@" + columnsToUpdate[i], values[i]);
             }
 
-            Console.WriteLine("Statement: " );
+            // Console.WriteLine("Statement: " );
 
-            string finalSql = command.CommandText;
-            foreach (SqlParameter param in command.Parameters)
-            {
-                finalSql = finalSql.Replace(param.ParameterName, param.Value.ToString());
-            }
+            // string finalSql = command.CommandText;
+            // foreach (SqlParameter param in command.Parameters)
+            // {
+            //     finalSql = finalSql.Replace(param.ParameterName, param.Value.ToString());
+            // }
 
-            // Write the completed command statement to the console
-            Console.WriteLine("Statement: " + finalSql);
+            // // Write the completed command statement to the console
+            // Console.WriteLine("Statement: " + finalSql);
 
             try {
                 connection.Open();
