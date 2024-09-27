@@ -7,13 +7,28 @@
 <head>
     <link rel="stylesheet" type="text/css" href="~/css/MockPages/products.css" />
 </head>
-<body class="bg-dark text-white">
-    <div class="container text-center my-4">
-        <h1 class="display-4">Bug Emporium</h1>
 
-        @Html.Partial("_SearchBar.cshtml")
+
+<div class="header-container">
+
+    <div class="search-bar">
+        @await Html.PartialAsync("_SearchBar.cshtml")
     </div>
 
+    <div class="title">
+        Bug Emporium
+    </div>
+    
+    @{
+        var itemCount = 3;
+    }
+    <div class="header-cart">
+        @await Html.PartialAsync("_CartButton.cshtml", itemCount)
+    </div>
+</div>
+
+
+<body class="bg-dark text-white">
     <div class="container">
         @for (int i = 0; i < Model.Count(); i += 4)
         {
