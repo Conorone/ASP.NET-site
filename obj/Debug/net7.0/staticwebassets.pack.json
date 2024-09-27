@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\MockPages\\search.css"
     },
     {
+      "Id": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\css\\MockPages\\singleProduct.css",
+      "PackagePath": "staticwebassets\\css\\MockPages\\singleProduct.css"
+    },
+    {
       "Id": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -35,6 +39,10 @@
     {
       "Id": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\images\\blog\\ezblog.png",
       "PackagePath": "staticwebassets\\images\\blog\\ezblog.png"
+    },
+    {
+      "Id": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\images\\products\\cart.png",
+      "PackagePath": "staticwebassets\\images\\products\\cart.png"
     },
     {
       "Id": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\js\\site.js",

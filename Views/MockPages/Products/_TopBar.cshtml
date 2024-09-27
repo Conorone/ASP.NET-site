@@ -1,0 +1,20 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/MockPages/products.css" />
+</head>
+
+<div class="header-container">
+    <div class="search-bar">
+        @await Html.PartialAsync("_SearchBar.cshtml")
+    </div>
+
+    <div class="title">
+        Bug Emporium
+    </div>
+    
+    @{
+        var itemCount = 3;
+    }
+    <div class="header-cart">
+        @await Html.PartialAsync("_CartButton.cshtml", itemCount)
+    </div>
+</div>

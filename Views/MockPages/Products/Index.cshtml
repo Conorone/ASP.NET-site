@@ -8,66 +8,48 @@
     <link rel="stylesheet" type="text/css" href="~/css/MockPages/products.css" />
 </head>
 
-
-<div class="header-container">
-
-    <div class="search-bar">
-        @await Html.PartialAsync("_SearchBar.cshtml")
-    </div>
-
-    <div class="title">
-        Bug Emporium
-    </div>
-    
-    @{
-        var itemCount = 3;
-    }
-    <div class="header-cart">
-        @await Html.PartialAsync("_CartButton.cshtml", itemCount)
-    </div>
-</div>
+@await Html.PartialAsync("_TopBar.cshtml")
 
 
-<body class="bg-dark text-white">
-    <div class="container">
-        @for (int i = 0; i < Model.Count(); i += 4)
-        {
-            <div class="row justify-content-around"> <!-- Row for the cards -->
-                @for (int j = i; j < i + 4 && j < Model.Count(); j++)
-                {
-                    var item = Model.ElementAt(j);
-                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center mb-4">
-                        <div class="card text-white" 
-                             onclick="window.location.href='@Url.Action("ViewProduct", "Product", new { productID = item.ID } )';" 
-                             style="cursor: pointer; width: 18rem;">
-                             
-                            @if (item.Image != null && item.Image.Length > 0)
-                            {
-                                <img src="data:image/png;base64,@Convert.ToBase64String(item.Image)" 
-                                     class="card-img-top fixed-image-size" 
-                                     alt="Product Image">
-                            }
-                            else
-                            {
-                                <img src="/images/placeholder.png" 
-                                     class="card-img-top fixed-image-size" 
-                                     alt="No Image Available">
-                            }
+<div class="container">
+    @for (int i = 0; i < Model.Count(); i += 4)
+    {
+        <div class="row justify-content-around"> <!-- Row for the cards -->
+            @for (int j = i; j < i + 4 && j < Model.Count(); j++)
+            {
+                var item = Model.ElementAt(j);
+                <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center mb-4">
+                    <div class="card text-white" 
+                            onclick="window.location.href='@Url.Action("ViewProduct", "Product", new { productID = item.ID } )';" 
+                            style="cursor: pointer; width: 18rem;">
+                            
+                        @if (item.Image != null && item.Image.Length > 0)
+                        {
+                            <img src="data:image/png;base64,@Convert.ToBase64String(item.Image)" 
+                                    class="card-img-top fixed-image-size" 
+                                    alt="Product Image">
+                        }
+                        else
+                        {
+                            <img src="/images/placeholder.png" 
+                                    class="card-img-top fixed-image-size" 
+                                    alt="No Image Available">
+                        }
 
-                            <div class="card-body d-flex flex-column justify-content-end">
-                                <h5 class="card-title">@item.Name</h5>
-                                <p class="card-text">@Html.DisplayFor(m => item.Price)</p>
-                                <a href="#" class="btn btn-primary mt-auto">Add to cart</a>
-                            </div>
+                        <div class="card-body d-flex flex-column justify-content-end">
+                            <h5 class="card-title">@item.Name</h5>
+                            <p class="card-text">@Html.DisplayFor(m => item.Price)</p>
+                            <a href="#" class="btn btn-primary mt-auto">Add to cart</a>
                         </div>
                     </div>
-                }
-            </div>
-            @if (i + 3 < Model.Count())
-            {
-                <hr class="card-row-divider" />
+                </div>
             }
+        </div>
+        @if (i + 3 < Model.Count())
+        {
+            <hr class="card-row-divider" />
         }
-    </div>
-</body>
+    }
+</div>
+
 </html>

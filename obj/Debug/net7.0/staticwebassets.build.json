@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uyEwbmFowQ0y5pmTktIs9sCbzYcQddTXkpuVtzodfk0=",
+  "Hash": "bEb3guBzgcuRXQxa9HmIRaF5zfeVdcTEbHsYUj9pL1Q=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -112,6 +112,25 @@
       "OriginalItemSpec": "wwwroot\\css\\MockPages\\search.css"
     },
     {
+      "Identity": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\css\\MockPages\\singleProduct.css",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "css/MockPages/singleProduct.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\MockPages\\singleProduct.css"
+    },
+    {
       "Identity": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\css\\site.css",
       "SourceId": "WebApp",
       "SourceType": "Discovered",
@@ -205,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\blog\\ezblog.png"
+    },
+    {
+      "Identity": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\images\\products\\cart.png",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "images/products/cart.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\cart.png"
     },
     {
       "Identity": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\js\\site.js",

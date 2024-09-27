@@ -1,30 +1,36 @@
-@* @model WebApp.Models.ProductModel
-
-<h4>@Html.DisplayFor(product => product.Name)</h4>
-<p>@Html.DisplayFor(product => product.Description)</p>
-
-<div>
-    <p>@Html.DisplayFor(product => product.Price)</p>
-    <a class = "btn btn-primary" asp-action = "AddToCart">Add to Cart</a>
-</div> *@
-
 @model WebApp.Models.ProductModel
 
-<h4>@Html.DisplayFor(product => product.Name)</h4>
-<p>@Html.DisplayFor(product => product.Description)</p>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/MockPages/singleProduct.css" />
+</head>
 
-<div>
-    <p>@Html.DisplayFor(product => product.Price)</p>
+@await Html.PartialAsync("_TopBar.cshtml")
 
-    <!-- Create a form to submit the product data to the AddToCart action -->
-    <form asp-action="AddToCart" method="post">
-        <!-- Hidden fields to submit the product data -->
-        <input type="hidden" asp-for="ID" />
-        <input type="hidden" asp-for="Name" />
-        <input type="hidden" asp-for="Description" />
-        <input type="hidden" asp-for="Price" />
+<div class="product-container">
+    <div class="product-image">
+        @if (Model.Image != null && Model.Image.Length > 0)
+        {
+            <div>
+                <img src="data:image/png;base64,@Convert.ToBase64String(Model.Image)" class="img-thumbnail" alt="Product Image" class="img-fluid large-image"/>
+            </div>
+        }
+    </div>
 
-        <!-- Submit button for adding to the cart -->
-        <button type="submit" class="btn btn-primary">Add to Cart</button>
-    </form>
+    <div class="product-details">
+        <h4>@Html.DisplayFor(product => product.Name)</h4>
+        <h3 class="product-price">@Html.DisplayFor(product => product.Price)</h3>
+        <p>@Html.DisplayFor(product => product.Description)</p>
+
+        <!-- Form to add to cart -->
+        <form asp-action="AddToCart" method="post">
+            <input type="hidden" asp-for="ID" />
+            <input type="hidden" asp-for="Name" />
+            <input type="hidden" asp-for="Description" />
+            <input type="hidden" asp-for="Price" />
+
+            <!-- Add to Cart button -->
+            <p>@Html.DisplayFor(product => product.Stock)</p>
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </form>
+    </div>
 </div>
