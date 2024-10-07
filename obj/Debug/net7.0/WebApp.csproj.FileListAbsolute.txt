@@ -138,7 +138,6 @@ c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.csproj.CoreCompileInpu
 c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.MvcApplicationPartsAssemblyInfo.cache
 c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.RazorAssemblyInfo.cache
 c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.RazorAssemblyInfo.cs
-c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.sourcelink.json
 c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\staticwebassets.build.json
 c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\staticwebassets.development.json
 c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\staticwebassets\msbuild.WebApp.Microsoft.AspNetCore.StaticWebAssets.props
@@ -149,9 +148,9 @@ c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\staticwebassets.pack.json
 c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\scopedcss\bundle\WebApp.styles.css
 c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\scopedcss\projectbundle\WebApp.bundle.scp.css
-C:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.csproj.Up2Date
 c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.dll
 c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\refint\WebApp.dll
 c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.pdb
 C:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.genruntimeconfig.cache
 C:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\ref\WebApp.dll
+C:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.csproj.CopyComplete

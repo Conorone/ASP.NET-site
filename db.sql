@@ -1,1 +1,1 @@
-SELECT * FROM Test.dbo.Products WHERE Name LIKE '%a%'
+ALTER TABLE Test.dbo.Products ALTER COLUMN Price decimal(10, 2);

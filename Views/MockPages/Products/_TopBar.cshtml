@@ -12,9 +12,9 @@
     </div>
     
     @{
-        var itemCount = 3;
+        int cartCount = ViewBag.cartCount;
     }
     <div class="header-cart">
-        @await Html.PartialAsync("_CartButton.cshtml", itemCount)
+        @await Html.PartialAsync("_CartButton.cshtml", cartCount)
     </div>
 </div>

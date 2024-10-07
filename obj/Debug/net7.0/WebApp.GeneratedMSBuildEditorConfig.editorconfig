@@ -10,118 +10,116 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApp
 build_property.RootNamespace = WebApp
 build_property.ProjectDir = C:\Users\Connor\Mess\ASP.NET-site\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\Connor\Mess\ASP.NET-site
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Home/Index.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Home/Privacy.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Login/Index.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Login/LoginFailure.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Login/LoginFailure.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5GYWlsdXJlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Login/LoginSuccess.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Login/LoginSuccess.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5TdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Blog/Index.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja1BhZ2VzXEJsb2dcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Blog/_Comments.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Blog/_Comments.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja1BhZ2VzXEJsb2dcX0NvbW1lbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/Create.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja1BhZ2VzXFByb2R1Y3RzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/Index.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja1BhZ2VzXFByb2R1Y3RzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/Product.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/Product.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja1BhZ2VzXFByb2R1Y3RzXFByb2R1Y3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/SetStock.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/SetStock.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja1BhZ2VzXFByb2R1Y3RzXFNldFN0b2NrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/Update.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja1BhZ2VzXFByb2R1Y3RzXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/UserCart.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/UserCart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja1BhZ2VzXFByb2R1Y3RzXFVzZXJDYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/_CartButton.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/_CartButton.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja1BhZ2VzXFByb2R1Y3RzXF9DYXJ0QnV0dG9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/_SearchBar.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/_SearchBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja1BhZ2VzXFByb2R1Y3RzXF9TZWFyY2hCYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/_TopBar.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/MockPages/Products/_TopBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9ja1BhZ2VzXFByb2R1Y3RzXF9Ub3BCYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Profile/Edit.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Profile/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Profile/Failed.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Profile/Failed.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxGYWlsZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Profile/Index.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Profile/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Register/Create.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Register/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Register/Index.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Register/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Shared/Error.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Shared/_Navbar.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Shared/_Navbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/_ViewImports.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/_ViewStart.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Connor/Mess/ASP.NET-site/Views/Shared/_Layout.cshtml]
+[C:/Users/Connor/Mess/ASP.NET-site/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7882z672yd

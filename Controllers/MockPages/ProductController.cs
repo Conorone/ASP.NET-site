@@ -12,6 +12,14 @@ public class ProductController : Controller {
         ProductsDAO productsDAO = new ProductsDAO();
         List<ProductModel> productsList = productsDAO.GetAllProducts();
 
+        int count = 0;
+        CartModel cart = GetCartFromSession();
+        if (cart != null) {
+            count = cart.GetItemCount();
+        }
+
+        ViewBag.cartCount = count;
+
         return View("~/Views/MockPages/Products/Index.cshtml", productsList);
     }
 
@@ -30,6 +38,15 @@ public class ProductController : Controller {
         ProductsDAO productsDAO = new ProductsDAO();
 
         ProductModel product = productsDAO.GetProductByID(productID);
+
+        int count = 0;
+        CartModel cart = GetCartFromSession();
+        if (cart != null) {
+            count = cart.GetItemCount();
+        }
+
+        ViewBag.cartCount = count;
+
         return View("~/Views/MockPages/Products/product.cshtml", product);
     }
 
@@ -47,8 +64,8 @@ public class ProductController : Controller {
         cart.Add(product);
 
         Console.WriteLine("Items in Cart:");
-        foreach(ProductModel item in cart.items) {
-            Console.WriteLine(item.Name);
+        foreach(CartItem item in cart.items) {
+            Console.WriteLine(item.product.Name);
         }
 
         productsJson = JsonConvert.SerializeObject(cart);
@@ -63,8 +80,10 @@ public class ProductController : Controller {
     }
 
     public CartModel? GetCartFromSession() {
-        string? productsJson = HttpContext.Session.GetString("CartProducts"); 
-        return JsonConvert.DeserializeObject<CartModel>(productsJson);
+        string? productsJson = HttpContext.Session.GetString("CartProducts");
+        if (productsJson != null)
+            return JsonConvert.DeserializeObject<CartModel>(productsJson);
+        else return null;
     }
 
     public void AddCartToSession(CartModel cart) {
@@ -75,8 +94,8 @@ public class ProductController : Controller {
     public IActionResult Checkout() {
         ProductsDAO productsDAO = new ProductsDAO();
         CartModel cart = GetCartFromSession();
-        foreach(ProductModel product in cart.items) {
-            productsDAO.DecreaseStock(product);
+        foreach(CartItem item in cart.items) {
+            productsDAO.DecreaseStock(item.product);
         }
 
         return RedirectToAction("Index");

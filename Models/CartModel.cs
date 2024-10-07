@@ -2,34 +2,51 @@ using Microsoft.Extensions.Configuration.UserSecrets;
 using Microsoft.Identity.Client;
 using WebApp.Models;
 
+namespace WebApp.Models;
+
 public class CartModel {
-    public List<ProductModel> items { get; set; }
+    public List<CartItem> items { get; set; }
     public int userID { get; set; }
 
     public CartModel() {
-        items = new List<ProductModel>();
+        items = new List<CartItem>();
+    }
+
+    public int GetItemCount() {
+        int count = 0;
+        foreach(CartItem cartItem in items) {
+            count += cartItem.quantity;
+        }
+        return count;
     }
 
     public void Add(ProductModel item) {
-        items.Add(item);
+        foreach(CartItem cartItem in items) {
+            ProductModel existingItem = cartItem.product;
+            if (item.ID == existingItem.ID) {
+                cartItem.Increment();
+                return;
+            }
+        }
+        items.Add(new CartItem() {product = item});
     }
 
     public void Remove(ProductModel item) {
-        items.Remove(item);
+        items.Remove(new CartItem() {product = item});
     }
 
     public decimal GetFullPrice() {
         decimal result = 0;
-        foreach(ProductModel item in items) {
-            result += item.Price;
+        foreach(CartItem item in items) {
+            result += item.GetPrice;
         }
         return result;
     }
 
     public void PrintItems() {
         Console.WriteLine("Items in Cart:");
-        foreach(ProductModel item in items) {
-            Console.WriteLine(item.Name);
+        foreach(CartItem item in items) {
+            Console.WriteLine(item.product.Name);
         }
     }
 
