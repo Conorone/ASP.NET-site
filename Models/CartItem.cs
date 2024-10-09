@@ -11,6 +11,11 @@ public class CartItem {
         quantity = 1;
     }
 
+    public CartItem(ProductModel product, int quantity) {
+        this.product = product;
+        this.quantity = quantity;
+    }
+
     public void Increment(int quantity) {
         this.quantity += quantity;
     }

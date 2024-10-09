@@ -22,7 +22,7 @@
         <p>@Html.DisplayFor(product => product.Description)</p>
 
         <!-- Form to add to cart -->
-        <form asp-action="AddToCart" asp-asp-controller="CartController" method="post">
+        <form asp-action="AddToCart" asp-controller="Cart" method="post">
             <input type="hidden" asp-for="ID" />
             <input type="hidden" asp-for="Name" />
             <input type="hidden" asp-for="Description" />

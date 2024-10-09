@@ -12,16 +12,19 @@ public class CartController : BaseShopController {
         if(cart == null)
             cart = new CartModel();
 
-        cart.Add(product);
+        CartItem cartItem = new CartItem();
+        cart.Add(cartItem);
 
         AddCartToSession(cart);
 
-        return RedirectToAction("Index");
+        return RedirectToAction("Index", "Product");
     }
 
     public IActionResult UserCart() {
         CartModel cart = GetCartFromSession();
-        return View("~/Views/MockPages/Products/UserCart.cshtml", cart.items);
+        if (cart != null)
+            return View("~/Views/MockPages/Products/UserCart.cshtml", cart.items);
+        return View("~/Views/MockPages/Products/UserCart.cshtml", new List<CartItem>());
     }
 
     public IActionResult Checkout() {
@@ -31,6 +34,6 @@ public class CartController : BaseShopController {
             productsDAO.DecreaseStock(item.product);
         }
 
-        return RedirectToAction("Index");
+        return RedirectToAction("Index", "Product");
     }
 }

@@ -20,15 +20,18 @@ public class CartModel {
         return count;
     }
 
-    public void Add(ProductModel item) {
+    public void Add(CartItem item) {
         foreach(CartItem cartItem in items) {
-            ProductModel existingItem = cartItem.product;
-            if (item.ID == existingItem.ID) {
+            if (item.product.ID == cartItem.product.ID) {
                 cartItem.Increment();
                 return;
             }
         }
-        items.Add(new CartItem() {product = item});
+        items.Add(item);
+    }
+
+        public void Add(ProductModel item) {
+        Add(new CartItem() {product = item});
     }
 
     public void Remove(ProductModel item) {
