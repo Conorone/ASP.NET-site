@@ -5,14 +5,12 @@ using WebApp.Services;
 
 public class CartController : BaseShopController {
     
-    public IActionResult AddToCart(ProductModel product) {
+    public IActionResult AddToCart(ProductModel product, int quantity) {
         Console.WriteLine("Buying Item: " + product.Name);
 
         CartModel? cart = GetCartFromSession();
-        if(cart == null)
-            cart = new CartModel();
 
-        CartItem cartItem = new CartItem();
+        CartItem cartItem = new CartItem(product, quantity);
         cart.Add(cartItem);
 
         AddCartToSession(cart);
@@ -20,20 +18,31 @@ public class CartController : BaseShopController {
         return RedirectToAction("Index", "Product");
     }
 
+    public IActionResult RemoveFromCart(ProductModel product, int quantity) {
+        CartModel? cart = GetCartFromSession();
+        cart.Remove(product);
+
+        AddCartToSession(cart);
+
+        return RedirectToAction("UserCart");
+    }
+
     public IActionResult UserCart() {
         CartModel cart = GetCartFromSession();
         if (cart != null)
-            return View("~/Views/MockPages/Products/UserCart.cshtml", cart.items);
-        return View("~/Views/MockPages/Products/UserCart.cshtml", new List<CartItem>());
+            return View("~/Views/MockPages/Products/UserCart.cshtml", cart);
+        return View("~/Views/MockPages/Products/UserCart.cshtml", new CartModel());
     }
 
     public IActionResult Checkout() {
         ProductsDAO productsDAO = new ProductsDAO();
         CartModel cart = GetCartFromSession();
+
+
         foreach(CartItem item in cart.items) {
             productsDAO.DecreaseStock(item.product);
         }
 
-        return RedirectToAction("Index", "Product");
+        return View("~/Views/MockPages/Products/Checkout.cshtml");
     }
 }

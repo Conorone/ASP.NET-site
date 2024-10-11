@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v3fd2EcUOEIkq2MVH0LmpUvCosC+ZjNFLwPhiFj8+hs=",
+  "Hash": "70eHkbyahXloph6oe6ayjtaU6mo+0EJlLlrLH0KnGdk=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\MockPages\\singleProduct.css"
+    },
+    {
+      "Identity": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\css\\MockPages\\usercart.css",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "css/MockPages/usercart.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\MockPages\\usercart.css"
     },
     {
       "Identity": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\css\\site.css",

@@ -10,7 +10,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    gap: 50px;
+    gap: 70px;
 }
 
 .product-image {
@@ -28,7 +28,8 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    
 }
 
 .product-details h4 {
@@ -46,6 +47,8 @@ body {
 }
 
 .btn-primary {
+    margin: 1rem;
+    margin-left: 0;
     background-color: #1e90ff;
     border-color: #1e90ff;
 }
@@ -53,4 +56,40 @@ body {
 .btn-primary:hover {
     background-color: #007bff;
     border-color: #007bff;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    margin-right: 10px;
+    font-size: 16px; /* Optional: Adjust label size */
+}
+
+.form-group input[type="number"] {
+    width: 60px; /* Set the desired width of the input box */
+    padding: 5px;
+    font-size: 14px; /* Optional: Adjust font size */
+}
+
+.product-title {
+    margin-bottom: 10%;
+}
+
+.stock {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: green;
+}
+
+.add-product-line {
+    display:flex;
+    align-items: center;
+}
+
+.description {
+    margin-top: 10%;
 }

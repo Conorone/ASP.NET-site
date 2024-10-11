@@ -35,7 +35,16 @@ public class CartModel {
     }
 
     public void Remove(ProductModel item) {
-        items.Remove(new CartItem() {product = item});
+        CartItem itemToRemove = items.Find(i => i.product == item);
+        itemToRemove.Decrement();
+        if(itemToRemove.quantity <= 0) {
+            items.Remove(itemToRemove);
+        }
+    }
+
+    public void RemoveAll(ProductModel item) {
+        CartItem itemToRemove = items.Find(i => i.product == item);
+        items.Remove(itemToRemove);
     }
 
     public decimal GetFullPrice() {

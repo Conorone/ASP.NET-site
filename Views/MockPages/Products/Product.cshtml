@@ -17,9 +17,9 @@
     </div>
 
     <div class="product-details">
-        <h4>@Html.DisplayFor(product => product.Name)</h4>
+        <h4 class="product-title">@Html.DisplayFor(product => product.Name)</h4>
         <h3 class="product-price">@Html.DisplayFor(product => product.Price)</h3>
-        <p>@Html.DisplayFor(product => product.Description)</p>
+
 
         <!-- Form to add to cart -->
         <form asp-action="AddToCart" asp-controller="Cart" method="post">
@@ -27,10 +27,29 @@
             <input type="hidden" asp-for="Name" />
             <input type="hidden" asp-for="Description" />
             <input type="hidden" asp-for="Price" />
+            <input type="hidden" asp-for="Image" />
 
-            <!-- Add to Cart button -->
-            <p>@Html.DisplayFor(product => product.Stock)</p>
-            <button type="submit" class="btn btn-primary">Add to Cart</button>
+
+
+            <div class="add-product-line">
+                <!-- Add to Cart button -->
+                <button type="submit" class="btn btn-primary">Add to Cart</button>
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" class="form-control" />
+                </div>
+            </div>
+
+            <div class="stock">
+                @if(Model.Stock < 20) {
+                    @Html.DisplayFor(product => product.Stock)
+                    <div> left in stock</div>
+                } 
+                else {
+                    <div>In Stock</div>
+                }
+            </div>
         </form>
+        <p class="description">@Html.DisplayFor(product => product.Description)</p>
     </div>
 </div>

@@ -24,5 +24,13 @@ public class CartItem {
         Increment(1);
     }
 
+    public void Decrement(int quantity) {
+        this.quantity -= quantity;
+    }
+
+    public void Decrement() {
+        Decrement(1);
+    }
+
     public decimal GetPrice => product.Price * quantity;
 }

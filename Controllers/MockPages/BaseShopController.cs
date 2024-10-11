@@ -17,12 +17,11 @@ public class BaseShopController : Controller
 
         base.OnActionExecuting(filterContext);
     }
-
     public CartModel? GetCartFromSession() {
         string? productsJson = HttpContext.Session.GetString("CartProducts");
         if (productsJson != null)
             return JsonConvert.DeserializeObject<CartModel>(productsJson);
-        else return null;
+        else return new CartModel();
     }
     public void AddCartToSession(CartModel cart) {
         string productsJson = JsonConvert.SerializeObject(cart);
