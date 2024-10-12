@@ -27,4 +27,7 @@ public class BaseShopController : Controller
         string productsJson = JsonConvert.SerializeObject(cart);
         HttpContext.Session.SetString("CartProducts", productsJson);
     }
+    public void ClearCartSession() {
+        HttpContext.Session.Remove("CartProducts");
+    }
 }

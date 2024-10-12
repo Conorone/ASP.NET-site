@@ -44,6 +44,12 @@
                                 <td>@String.Format("{0:C}", item.product.Price)</td>
                                 <td>@item.quantity</td>
                                 <td>@String.Format("{0:C}", item.GetPrice)</td>
+                                <td>
+                                    <form action="@Url.Action("RemoveFromCart", "Cart")" method="post">
+                                        <input type="hidden" name="productId" value="@item.product.ID" />
+                                    <a href="@Url.Action("RemoveFromCart", "Cart", new { productId = item.product.ID })" class="remove-link">Remove</a>
+                                    </form>
+                                </td>
                             </tr>
                         }
                     </tbody>
@@ -56,7 +62,11 @@
                 <h3>Summary</h3>
                 <p>Total Items: @Model.GetItemCount()</p>
                 <p><strong>Total Price: @String.Format("{0:C}", totalPrice)</strong></p>
-                <button class="btn btn-primary btn-block">Checkout</button>
+                @if (Model.items.Count > 0) {
+                    <form asp-action="Checkout" asp-controller="Cart" method="post">
+                        <button class="btn btn-primary btn-block">Checkout</button>
+                    </form>
+                }
             </div>
         </div>
     </div>

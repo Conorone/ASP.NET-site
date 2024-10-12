@@ -43,7 +43,7 @@ h1 {
     border-color: #121212;
     color: #ffffff; /* White text color */
     width: 18rem; /* Consistent card width */
-    height: 27rem; /* Consistent card height */
+    height: 24rem; /* Consistent card height */
     display: flex;
     flex-direction: column; /* Ensure vertical alignment in the card */
 }

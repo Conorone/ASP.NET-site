@@ -23,7 +23,7 @@ public class CartModel {
     public void Add(CartItem item) {
         foreach(CartItem cartItem in items) {
             if (item.product.ID == cartItem.product.ID) {
-                cartItem.Increment();
+                cartItem.Increment(item.quantity);
                 return;
             }
         }
@@ -36,6 +36,14 @@ public class CartModel {
 
     public void Remove(ProductModel item) {
         CartItem itemToRemove = items.Find(i => i.product == item);
+        itemToRemove.Decrement();
+        if(itemToRemove.quantity <= 0) {
+            items.Remove(itemToRemove);
+        }
+    }
+
+    public void Remove(int productID) {
+        CartItem itemToRemove = items.Find(i => i.product.ID == productID);
         itemToRemove.Decrement();
         if(itemToRemove.quantity <= 0) {
             items.Remove(itemToRemove);

@@ -7,6 +7,7 @@ public class CartController : BaseShopController {
     
     public IActionResult AddToCart(ProductModel product, int quantity) {
         Console.WriteLine("Buying Item: " + product.Name);
+        Console.WriteLine("Quantity: " + quantity);
 
         CartModel? cart = GetCartFromSession();
 
@@ -18,9 +19,9 @@ public class CartController : BaseShopController {
         return RedirectToAction("Index", "Product");
     }
 
-    public IActionResult RemoveFromCart(ProductModel product, int quantity) {
+    public IActionResult RemoveFromCart(int productID) {
         CartModel? cart = GetCartFromSession();
-        cart.Remove(product);
+        cart.Remove(productID);
 
         AddCartToSession(cart);
 
@@ -38,11 +39,12 @@ public class CartController : BaseShopController {
         ProductsDAO productsDAO = new ProductsDAO();
         CartModel cart = GetCartFromSession();
 
-
         foreach(CartItem item in cart.items) {
             productsDAO.DecreaseStock(item.product);
         }
 
+        ClearCartSession();
+        
         return View("~/Views/MockPages/Products/Checkout.cshtml");
     }
 }
