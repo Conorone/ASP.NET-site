@@ -1,8 +1,32 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello!</title>
+    <link rel="stylesheet" type="text/css" href="~/css/home.css" />
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Hello!</h1>
+        </div>
+    </header>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <main>
+        <section class="projects-section">
+            <div class="project-card">
+                <h2>Bug shop!</h2>
+                <p>Mock online shopping site</p>
+                <a href="/product">View Project</a>
+            </div>
+            <div class="project-card">
+                <h2>Blog page</h2>
+                <p>Work in progress, mock blog page that will include posts + comment and reply system</p>
+                <a href="/blog">View Project</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+

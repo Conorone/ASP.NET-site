@@ -2,6 +2,7 @@ using WebApp.Models;
 
 namespace WebApp.Models;
 
+// Simple class that pares product and quantity of product
 public class CartItem {
     public ProductModel product { get; set; }
     public int quantity { get; set; }

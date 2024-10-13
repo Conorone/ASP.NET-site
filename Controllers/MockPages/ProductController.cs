@@ -7,6 +7,7 @@ using WebApp.Services;
 
 namespace WebApp.Controllers;
 
+// Primary controller for mock shop site
 public class ProductController : BaseShopController {
     public IActionResult Index() {
         ProductsDAO productsDAO = new ProductsDAO();
@@ -15,6 +16,7 @@ public class ProductController : BaseShopController {
         return View("~/Views/MockPages/Products/Index.cshtml", productsList);
     }
 
+    // Filters items based on search term
     public IActionResult SearchResults(string searchTerm) {
         ProductsDAO productsDAO = new ProductsDAO();
         Console.WriteLine(searchTerm);
@@ -29,36 +31,7 @@ public class ProductController : BaseShopController {
 
         return View("~/Views/MockPages/Products/product.cshtml", product);
     }
-
-    // public IActionResult AddToCart(ProductModel product) {
-    //     Console.WriteLine("Buying Item: " + product.Name);
-
-    //     CartModel? cart = GetCartFromSession();
-    //     if(cart == null)
-    //         cart = new CartModel();
-
-    //     cart.Add(product);
-
-    //     AddCartToSession(cart);
-
-    //     return RedirectToAction("Index");
-    // }
-
-    // public IActionResult UserCart() {
-    //     CartModel cart = GetCartFromSession();
-    //     return View("~/Views/MockPages/Products/UserCart.cshtml", cart.items);
-    // }
-
-    // public IActionResult Checkout() {
-    //     ProductsDAO productsDAO = new ProductsDAO();
-    //     CartModel cart = GetCartFromSession();
-    //     foreach(CartItem item in cart.items) {
-    //         productsDAO.DecreaseStock(item.product);
-    //     }
-
-    //     return RedirectToAction("Index");
-    // }
-
+ 
     public IActionResult Update(int ID) {
         ProductsDAO productsDAO = new ProductsDAO();
         ProductModel product = productsDAO.GetProductByID(ID);
@@ -77,7 +50,7 @@ public class ProductController : BaseShopController {
             product.ImageToBinary();
 
             productsDAO.Update(product);
-            return RedirectToAction("Index");    // Redirect to the product list or any other view
+            return RedirectToAction("Index");
         }
         return View(product);
     }
@@ -101,12 +74,12 @@ public class ProductController : BaseShopController {
                 using (var memoryStream = new MemoryStream())
                 {
                     await imageFile.CopyToAsync(memoryStream);
-                    product.Image = memoryStream.ToArray(); // Convert image to byte array
+                    product.Image = memoryStream.ToArray();
                 }
             }
 
-            productsDAO.Insert(product);  // Call Insert method to save product in database
-            return RedirectToAction("Index");    // Redirect to the product list or any other view
+            productsDAO.Insert(product);
+            return RedirectToAction("Index");
         }
         return View(product);
     }

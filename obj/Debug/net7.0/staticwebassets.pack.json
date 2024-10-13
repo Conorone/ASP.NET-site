@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\css\\MockPages\\usercart.css"
     },
     {
+      "Id": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
       "Id": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

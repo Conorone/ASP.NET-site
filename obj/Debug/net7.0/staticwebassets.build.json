@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "70eHkbyahXloph6oe6ayjtaU6mo+0EJlLlrLH0KnGdk=",
+  "Hash": "vE45knqjtNb4ZSSZQMCAEjSjqRyDDsJdVNIbsBzynXk=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\WebApp.bundle.scp.css"
+    },
+    {
+      "Identity": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\css\\home.css",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "css/home.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\home.css"
     },
     {
       "Identity": "c:\\Users\\Connor\\Mess\\ASP.NET-site\\wwwroot\\css\\MockPages\\blog.css",

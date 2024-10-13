@@ -4,6 +4,7 @@ using WebApp.Models;
 
 namespace WebApp.Models;
 
+// Handles user carts
 public class CartModel {
     public List<CartItem> items { get; set; }
     public int userID { get; set; }

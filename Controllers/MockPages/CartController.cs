@@ -3,12 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using WebApp.Models;
 using WebApp.Services;
 
+// Controller for mock shop site, deals with cart based aspects
 public class CartController : BaseShopController {
     
     public IActionResult AddToCart(ProductModel product, int quantity) {
-        Console.WriteLine("Buying Item: " + product.Name);
-        Console.WriteLine("Quantity: " + quantity);
-
         CartModel? cart = GetCartFromSession();
 
         CartItem cartItem = new CartItem(product, quantity);
@@ -28,6 +26,7 @@ public class CartController : BaseShopController {
         return RedirectToAction("UserCart");
     }
 
+    // Display user cart
     public IActionResult UserCart() {
         CartModel cart = GetCartFromSession();
         if (cart != null)
@@ -35,6 +34,7 @@ public class CartController : BaseShopController {
         return View("~/Views/MockPages/Products/UserCart.cshtml", new CartModel());
     }
 
+    // Decreases stock according to items in cart. Clears cart. Shows checkout view
     public IActionResult Checkout() {
         ProductsDAO productsDAO = new ProductsDAO();
         CartModel cart = GetCartFromSession();

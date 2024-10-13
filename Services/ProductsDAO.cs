@@ -131,34 +131,6 @@ public class ProductsDAO : IProductDataService
         return success;
     }
 
-
-    // public List<ProductModel> SearchProducts(string searchTerm)
-    // {
-    //     List<ProductModel> foundProducts = new List<ProductModel>();
-
-    //     string sqlStatement = $"SELECT * FROM {table} WHERE Name LIKE @Name";
-
-    //     using (SqlConnection connection = new SqlConnection(connectionString)) {
-    //         SqlCommand command = new SqlCommand(sqlStatement, connection);
-    //         command.Parameters.AddWithValue("@Name", '%' + searchTerm + '%');
-
-    //         try {
-    //             connection.Open();
-
-    //             SqlDataReader reader = command.ExecuteReader();
-    //             while(reader.Read()) {
-    //                 ProductModel product = new ProductModel { ID = (int)reader[0], Name = (string)reader[1], Price = (decimal)reader[2], Description = (string)reader[3], Stock = (int)reader[4] };
-    //                 product.Image = reader[5] == DBNull.Value ? null : (byte[])reader[5];
-    //                 foundProducts.Add(product);
-    //             }
-
-    //         } catch (Exception ex) {
-    //             Console.WriteLine(ex.Message);
-    //         }
-    //     }
-    //     return foundProducts;
-    // }
-
     public bool UpdateByID(int ID, ProductColumns column, object value)
     {
         bool success = false;
@@ -252,17 +224,6 @@ public class ProductsDAO : IProductDataService
                 command.Parameters.AddWithValue("@" + columnsToUpdate[i], values[i]);
             }
 
-            // Console.WriteLine("Statement: " );
-
-            // string finalSql = command.CommandText;
-            // foreach (SqlParameter param in command.Parameters)
-            // {
-            //     finalSql = finalSql.Replace(param.ParameterName, param.Value.ToString());
-            // }
-
-            // // Write the completed command statement to the console
-            // Console.WriteLine("Statement: " + finalSql);
-
             try {
                 connection.Open();
 
@@ -300,9 +261,6 @@ public class ProductsDAO : IProductDataService
         Update(product, ProductColumns.Stock, stock);
     }
 }
-
-
-
 
 public enum ProductColumns {
     ID,
