@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ucZokHzLmC5YDt5p1i+TUVCwmJZykcfEhhPTokkNY5mWm+JjKhzKpppcbMm14ATUj1bnqchAuuo0ZaRYHhkX+g==",
+  "dgSpecHash": "VwBFSHB93o0=",
   "success": true,
   "projectFilePath": "C:\\Users\\Connor\\Mess\\ASP.NET-site\\WebApp.csproj",
   "expectedPackageFiles": [
@@ -42,7 +42,11 @@
     "C:\\Users\\Connor\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
     "C:\\Users\\Connor\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\Connor\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\Connor\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\Connor\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Connor\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\Connor\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\Connor\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\Connor\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
   ],
   "logs": []
 }

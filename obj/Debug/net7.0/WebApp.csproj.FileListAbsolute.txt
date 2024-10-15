@@ -153,4 +153,5 @@ c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\refint\WebApp.dll
 c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.pdb
 C:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.genruntimeconfig.cache
 C:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\ref\WebApp.dll
-C:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.csproj.CopyComplete
+c:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.sourcelink.json
+C:\Users\Connor\Mess\ASP.NET-site\obj\Debug\net7.0\WebApp.csproj.Up2Date
