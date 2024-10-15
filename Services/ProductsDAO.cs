@@ -243,11 +243,11 @@ public class ProductsDAO : IProductDataService
         return UpdateByID(product.ID, column, value);
     }
 
-    public int DecreaseStock(ProductModel product) {
+    public int DecreaseStock(ProductModel product, int quantity) {
         Console.WriteLine("Checking out... " + product.ID);
         int newStock = GetProductByID(product.ID).Stock;
-        if(newStock > 0) {
-            newStock--;
+        if(newStock - quantity > 0) {
+            newStock -= quantity;
             Console.WriteLine("Setting stock as.. " + newStock);
             Update(product, ProductColumns.Stock, newStock);
             return newStock;

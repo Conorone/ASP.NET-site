@@ -40,7 +40,7 @@ public class CartController : BaseShopController {
         CartModel cart = GetCartFromSession();
 
         foreach(CartItem item in cart.items) {
-            productsDAO.DecreaseStock(item.product);
+            productsDAO.DecreaseStock(item.product, item.quantity);
         }
 
         ClearCartSession();
